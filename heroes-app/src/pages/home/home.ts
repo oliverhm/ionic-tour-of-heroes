@@ -11,4 +11,8 @@ export class HomePage {
 
   }
 
+  public openHeroList() {
+    this.navCtrl.push("HeroPage");
+  }
+
 }
