@@ -11,12 +11,15 @@
 </ion-header>
 
 <ion-content padding>
+  <button ion-button (click)='openDetails()' >Adiciona</button>
+
   <ion-list>
     <ion-item ion-item *ngFor="let item of HEROES">
       <h2 class="title">id: {{item.id}}</h2>
       <h3>name: {{item.name}}</h3>
-      <button ion-button color="danger">Click</button>
+      <hero-button [hero]='item' (clickButton)='openDetails($event)'></hero-button>
     </ion-item>
   </ion-list>
+
 
 </ion-content>
